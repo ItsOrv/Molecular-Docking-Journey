@@ -61,5 +61,4 @@ Staying organized makes life easier!
 
 Wrapping Up
 
-That’s it for the installation part! By updating your system and downloading the necessary apps from their official websites, you’re all set up for some molecular docking fun. If you run into any issues, just drop a note in the repo’s issues section. Next up, we’ll run our first docking experiment!
-
+That’s it for the installation part! By updating your system and downloading the necessary apps from their official websites, you’re all set up for some molecular docking fun. If you run into any issues, just drop a note in the repo’s issues section.
