@@ -1,3 +1,5 @@
+[English](intro-en.md) / [فارسی](intro-fa.md)
+
 Step 1: Introduction to Molecular Docking
 
 Hey, welcome to the first step of my molecular docking journey!
