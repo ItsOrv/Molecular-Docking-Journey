@@ -8,6 +8,6 @@
 
 سیستم عامل خودتون رو انتخاب کنید:
 
-[Linux](installation-Linux-fa.md) / [Windows](installation-Windows-fa.md)
+[Linux](Installation-Linux-fa.md) / [Windows](Installation-Windows-fa.md)
 
 
