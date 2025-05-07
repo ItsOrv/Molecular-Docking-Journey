@@ -1,6 +1,3 @@
-
-## ✅ پیش‌نیازها
-
 ابتدا کتابخانه‌های پایه را نصب کنید:
 
 ```bash
@@ -10,7 +7,7 @@ sudo apt install build-essential cmake git curl wget unzip zlib1g-dev libglu1-me
 
 ---
 
-## 🔧 مراحل نصب نرم‌افزارها
+## مراحل نصب نرم‌افزارها
 
 ### ۱. Open Babel (تبدیل فرمت‌های مولکولی)
 
@@ -25,7 +22,7 @@ obabel -V  # بررسی نصب
 
 ### ۲. AutoDock Vina (موتور اصلی داکینگ)
 
-📥 دانلود از GitHub:
+دانلود از GitHub:
 
 [https://github.com/ccsb-scripps/AutoDock-Vina/releases](https://github.com/ccsb-scripps/AutoDock-Vina/releases)
 
@@ -35,7 +32,7 @@ obabel -V  # بررسی نصب
 
 ### ۳. AutoDock Tools (ADT)
 
-💡 نیاز به Python 2.7 دارد، پیشنهاد می‌شود در محیط Conda نصب شود:
+نیاز به Python 2.7 دارد، پیشنهاد می‌شود در محیط Conda نصب شود:
 
 ```bash
 conda create -n adt-env python=2.7 -y
@@ -50,7 +47,7 @@ conda install -c bioconda autodocktools -y
 
 ### ۴. PyRx (رابط گرافیکی ساده برای Vina)
 
-📥 دانلود فایل `PyRx-????.AppImage` از GitHub:
+دانلود فایل `PyRx-????.AppImage` از GitHub:
 
 [https://github.com/mvina/PyRx/releases](https://github.com/mvina/PyRx/releases)
 
@@ -65,7 +62,7 @@ chmod +x PyRx-????.AppImage
 
 ### ۵. UCSF Chimera (نمایش و ویرایش ساختارهای مولکولی)
 
-📥 دانلود فایل `chimera-????.bin` از سایت رسمی:
+دانلود فایل `chimera-????.bin` از سایت رسمی:
 
 [https://www.cgl.ucsf.edu/chimera/download.html](https://www.cgl.ucsf.edu/chimera/download.html)
 
@@ -80,7 +77,7 @@ chmod +x chimera-????.bin
 
 ### ۶. LigPlot+ (نقشه تعاملات دو بعدی لیگاند و پروتئین)
 
-📥 دانلود از سایت رسمی:
+دانلود از سایت رسمی:
 
 [https://www.ebi.ac.uk/thornton-srv/software/LigPlus/](https://www.ebi.ac.uk/thornton-srv/software/LigPlus/)
 
@@ -105,7 +102,7 @@ cd LigPlus
 
 ### ۸. Mendeley Desktop (مدیریت منابع مقاله)
 
-📥 دانلود فایل `mendeleydesktop-????.tar.bz2` از سایت آرشیو:
+دانلود فایل `mendeleydesktop-????.tar.bz2` از سایت آرشیو:
 
 [https://desktop-download.mendeley.com/download/linux/](https://desktop-download.mendeley.com/download/linux/)
 
