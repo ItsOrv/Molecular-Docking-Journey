@@ -1,7 +1,9 @@
-ابتدا کتابخانه‌های پایه را نصب کنید:
-
+اول سیستم رو آپدیت میکنیم تا آخرین نسخه از پکیج هارو نصب کنه:
 ```bash
 sudo apt update && sudo apt upgrade
+````
+حالا پکیج های پایه و ضروری رو نصب میکنیم
+```bash
 sudo apt install build-essential cmake git curl wget unzip zlib1g-dev libglu1-mesa libxi-dev libxmu-dev libpng-dev libfreetype6-dev default-jre
 ````
 
