@@ -41,6 +41,7 @@ obabel -V  # بررسی نصب
 ```bash
 ./vina_<version>_<os>_<arch> --help
 ```
+حالا اینو به /usr/local/bin انتقال میدیم
 
 #### روش ۲: نصب از طریق pip
 
@@ -105,6 +106,7 @@ python setup.py build install
 ---
 
 ### ۳.۳. AutoDock Tools (ADT)
+xxxx این بخش هنوز مشکل داره xxxx
 
 به دلیل نیاز به Python 2.7، توصیه می‌شود در محیط Conda نصب شود:
 
