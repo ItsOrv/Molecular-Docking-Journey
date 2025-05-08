@@ -123,13 +123,14 @@ conda install -c bioconda autodocktools -y
 
 ### ۳.۴. PyRx (رابط گرافیکی ساده برای Vina)
 
-دانلود از [صفحه GitHub PyRx](https://github.com/mvina/PyRx/releases)
+دانلود از [sourceforge](https://sourceforge.net/projects/pyrx/)
 
 نصب:
 
 ```bash
-chmod +x PyRx-????.AppImage
-./PyRx-????.AppImage
+tar -xzvf pyrx-?????-linux-x86_64.tar.gz 
+cd PyRx
+./run.sh 
 ```
 
 ---
