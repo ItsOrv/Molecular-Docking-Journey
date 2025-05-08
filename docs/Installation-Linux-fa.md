@@ -1,19 +1,28 @@
-اول سیستم رو آپدیت میکنیم تا آخرین نسخه از پکیج هارو نصب کنه
+## ۱. به‌روزرسانی سیستم
+
+ابتدا سیستم را به‌روزرسانی کنید تا آخرین نسخه از بسته‌ها نصب شود:
+
 ```bash
 sudo apt update && sudo apt upgrade
-````
-حالا پکیج های پایه و ضروری رو نصب میکنیم
-```bash
-sudo apt install build-essential cmake git curl wget unzip zlib1g-dev libglu1-mesa libxi-dev libxmu-dev libpng-dev libfreetype6-dev default-jre
-````
+```
 
 ---
 
-## مراحل نصب نرم‌افزارها
+## ۲. نصب پیش‌نیازهای پایه
 
-### ۱. Open Babel (تبدیل فرمت‌های مولکولی)
+نصب ابزارها و کتابخانه‌های ضروری:
 
-نصب با APT:
+```bash
+sudo apt install build-essential cmake git curl wget unzip zlib1g-dev libglu1-mesa libxi-dev libxmu-dev libpng-dev libfreetype6-dev default-jre
+```
+
+---
+
+## ۳. نصب نرم‌افزارها
+
+### ۳.۱. Open Babel (تبدیل فرمت‌های مولکولی)
+
+نصب از APT:
 
 ```bash
 sudo apt install openbabel
@@ -22,19 +31,82 @@ obabel -V  # بررسی نصب
 
 ---
 
-### ۲. AutoDock Vina (موتور اصلی داکینگ)
+### ۳.۲. AutoDock Vina (موتور داکینگ)
 
-دانلود از GitHub:
+#### روش ۱: دانلود نسخه باینری
 
-[https://github.com/ccsb-scripps/AutoDock-Vina/releases](https://github.com/ccsb-scripps/AutoDock-Vina/releases)
+1. از [صفحه GitHub AutoDock Vina](https://github.com/ccsb-scripps/AutoDock-Vina/releases) نسخه مناسب را دانلود کنید.
+2. فایل باینری را اجرا کنید:
 
-نصب به‌صورت معمول با استخراج فایل و افزودن مسیر به `PATH`.
+```bash
+./vina_<version>_<os>_<arch> --help
+```
+
+#### روش ۲: نصب از طریق pip
+
+```bash
+pip install -U numpy vina
+```
+
+#### روش ۳: نصب در محیط Conda
+
+1. نصب Anaconda یا Miniconda:
+
+   * [Anaconda](https://docs.continuum.io/anaconda/install)
+   * [Miniconda](https://conda.pydata.org/miniconda.html)
+
+2. ایجاد محیط مخصوص:
+
+```bash
+conda create -n vina python=3 -y
+conda activate vina
+conda config --env --add channels conda-forge
+```
+
+3. نصب وابستگی‌ها:
+
+```bash
+conda install -c conda-forge numpy swig boost-cpp libboost sphinx sphinx_rtd_theme
+pip install vina
+```
+
+#### روش ۴: ساخت از سورس (پیشنهاد نمی‌شود)
+
+**مرحله ۱: نصب کامپایلر**
+
+```bash
+sudo apt install build-essential
+```
+
+**مرحله ۲: نصب Boost و SWIG**
+
+```bash
+sudo apt install libboost-all-dev swig
+```
+
+**مرحله ۳: دریافت و ساخت سورس**
+
+```bash
+git clone https://github.com/ccsb-scripps/AutoDock-Vina
+cd AutoDock-Vina/build/linux/release
+make
+```
+
+**ساخت بایندینگ‌های پایتون:**
+
+```bash
+conda activate vina
+cd ../../python
+conda install -c conda-forge numpy boost-cpp swig
+rm -rf build dist *.egg-info
+python setup.py build install
+```
 
 ---
 
-### ۳. AutoDock Tools (ADT)
+### ۳.۳. AutoDock Tools (ADT)
 
-نیاز به Python 2.7 دارد، پیشنهاد می‌شود در محیط Conda نصب شود:
+به دلیل نیاز به Python 2.7، توصیه می‌شود در محیط Conda نصب شود:
 
 ```bash
 conda create -n adt-env python=2.7 -y
@@ -42,16 +114,13 @@ conda activate adt-env
 conda install -c bioconda autodocktools -y
 ```
 
-در صورت تمایل می‌توانید از سورس در سایت زیر نصب کنید:
-[http://autodock.scripps.edu](http://autodock.scripps.edu)
+یا دانلود از [سایت رسمی AutoDock](http://autodock.scripps.edu)
 
 ---
 
-### ۴. PyRx (رابط گرافیکی ساده برای Vina)
+### ۳.۴. PyRx (رابط گرافیکی ساده برای Vina)
 
-دانلود فایل `PyRx-????.AppImage` از GitHub:
-
-[https://github.com/mvina/PyRx/releases](https://github.com/mvina/PyRx/releases)
+دانلود از [صفحه GitHub PyRx](https://github.com/mvina/PyRx/releases)
 
 نصب:
 
@@ -62,13 +131,11 @@ chmod +x PyRx-????.AppImage
 
 ---
 
-### ۵. UCSF Chimera (نمایش و ویرایش ساختارهای مولکولی)
+### ۳.۵. UCSF Chimera (نمایش ساختارهای مولکولی)
 
-دانلود فایل `chimera-????.bin` از سایت رسمی:
+دانلود از [وب‌سایت رسمی UCSF Chimera](https://www.cgl.ucsf.edu/chimera/download.html)
 
-[https://www.cgl.ucsf.edu/chimera/download.html](https://www.cgl.ucsf.edu/chimera/download.html)
-
-اجرا:
+نصب:
 
 ```bash
 chmod +x chimera-????.bin
@@ -77,11 +144,9 @@ chmod +x chimera-????.bin
 
 ---
 
-### ۶. LigPlot+ (نقشه تعاملات دو بعدی لیگاند و پروتئین)
+### ۳.۶. LigPlot+ (تحلیل دو بعدی تعاملات)
 
-دانلود از سایت رسمی:
-
-[https://www.ebi.ac.uk/thornton-srv/software/LigPlus/](https://www.ebi.ac.uk/thornton-srv/software/LigPlus/)
+دانلود از [وب‌سایت LigPlot+](https://www.ebi.ac.uk/thornton-srv/software/LigPlus/)
 
 نصب:
 
@@ -93,20 +158,18 @@ cd LigPlus
 
 ---
 
-### ۷. SwissADME و pkCSM (پیش‌بینی ویژگی‌های دارویی)
+### ۳.۷. SwissADME و pkCSM (پیش‌بینی ویژگی‌های دارویی)
 
-ابزارهای آنلاین – بدون نیاز به نصب:
+ابزارهای آنلاین:
 
-* [https://www.swissadme.ch/](https://www.swissadme.ch/)
-* [https://biosig.lab.uq.edu.au/pkcsm/](https://biosig.lab.uq.edu.au/pkcsm/)
+* [SwissADME](https://www.swissadme.ch/)
+* [pkCSM](https://biosig.lab.uq.edu.au/pkcsm/)
 
 ---
 
-### ۸. Mendeley Desktop (مدیریت منابع مقاله)
+### ۳.۸. Mendeley Desktop (مدیریت منابع علمی)
 
-دانلود فایل `mendeleydesktop-????.tar.bz2` از سایت آرشیو:
-
-[https://desktop-download.mendeley.com/download/linux/](https://desktop-download.mendeley.com/download/linux/)
+دانلود از [لینک رسمی](https://desktop-download.mendeley.com/download/linux/)
 
 نصب:
 
@@ -118,9 +181,9 @@ cd mendeleydesktop-????/
 
 ---
 
-### ۹. Avogadro (ویرایش ساختارهای شیمیایی)
+### ۳.۹. Avogadro (ویرایش ساختارهای شیمیایی)
 
-نصب با APT:
+نصب مستقیم:
 
 ```bash
 sudo apt install avogadro
