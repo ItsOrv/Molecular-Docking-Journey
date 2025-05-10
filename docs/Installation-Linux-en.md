@@ -1,3 +1,7 @@
+[English](Installation-Linux-en.md) / [فارسی](Installation-Linux-fa.md)
+
+
+
 ## 1. System Update
 
 Start by updating your system to install the latest package versions:

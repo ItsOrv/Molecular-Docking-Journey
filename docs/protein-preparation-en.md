@@ -1,4 +1,4 @@
-[English](analysis-en.md) / [فارسی](analysis-fa.md)
+[English](protein-preparation-en.md) / [فارسی](protein-preparation-fa.md)
 
 
 # آموزش کامل آماده‌سازی پروتئین برای داکینگ مولکولی

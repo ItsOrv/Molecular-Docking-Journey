@@ -1,1 +1,1 @@
-[English](analysis-en.md) / [فارسی](analysis-fa.md)
+[English](ligand-preparation-en.md) / [فارسی](ligand-preparation-fa.md)
