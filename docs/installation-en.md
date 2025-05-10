@@ -1,6 +1,7 @@
 [English](installation-en.md) / [فارسی](installation-fa.md)
 
 
+
 Step 2: Installation & Setup on Linux Mint
 
 In this step, I'm walking you through setting up my Linux Mint environment for molecular docking. Linux Mint is awesome—lightweight, user-friendly, and perfect for running the tools we need.

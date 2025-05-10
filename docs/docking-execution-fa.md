@@ -1,3 +1,9 @@
+[English](docking-execution-en.md) / [فارسی](docking-execution-fa.md)
+
+
+
+
+
 ## مرحله داکینگ با AutoDock Vina
 
 ---
@@ -55,3 +61,6 @@ pymol protein.pdbqt output.pdbqt
 * سپس: `File → Open → output.pdbqt`
 
 → حالا می‌توانی اتصال لیگاند را در محل فعال پروتئین بررسی و تحلیل کنی.
+
+
+- **[مرحله ۶: تحلیل و نتایج](analysis-fa.md)**
