@@ -26,7 +26,10 @@ sudo apt install build-essential cmake git curl wget unzip zlib1g-dev libglu1-me
 
 ```bash
 sudo apt install openbabel
-obabel -V  # بررسی نصب
+```
+حالا با دستور زیر مطمئن میشیم که درست نصب شد
+```bash
+obabel -V
 ```
 
 ---
