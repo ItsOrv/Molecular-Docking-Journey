@@ -35,34 +35,24 @@ obabel -V  # بررسی نصب
 
 #### روش ۱: دانلود نسخه باینری
 
-1. از [صفحه GitHub AutoDock Vina](https://github.com/ccsb-scripps/AutoDock-Vina/releases) نسخه مناسب را دانلود کنید.
+1. از [GitHub AutoDock Vina](https://github.com/ccsb-scripps/AutoDock-Vina/releases) نسخه مناسب را دانلود کنید.
 2. فایل باینری را اجرا کنید:
 
 ```bash
-./vina_<version>_<os>_<arch> --help
+./vina_<version> --help
 ```
 حالا اینو به /usr/local/bin انتقال میدیم
-اگه با همین روش نصب کردین دیگه نیازی به انجام دادن روش های دیگه نیست
 
 #### روش های بعدی
-اگه این روش جواب نداد روش های بعدی رو چک کنید
+اگه این روش جواب نداد روش های بعدی رو برای نصب 
+چک کنید.
 
 [روش های جایگزین](Adv-other-installation-fa.md)
 ---
 
 ### ۳.۳. AutoDock Tools (ADT)
-xxxx این بخش هنوز مشکل داره xxxx
-
-به دلیل نیاز به Python 2.7، توصیه می‌شود در محیط Conda نصب شود:
-
-```bash
-conda create -n adt-env python=2.7 -y
-conda activate adt-env
-conda install -c bioconda autodocktools -y
-```
-
-یا دانلود از [سایت رسمی AutoDock](http://autodock.scripps.edu)
-
+اینو هنوز نمیدونم چجوری نصب کنم
+بعدا اضافه میکنم 
 ---
 
 ### ۳.۴. PyRx (رابط گرافیکی ساده برای Vina)
@@ -94,7 +84,7 @@ chmod +x chimera-????.bin
 
 ### ۳.۶. LigPlot+ (تحلیل دو بعدی تعاملات)
 
-دانلود از [وب‌سایت LigPlot+](https://www.ebi.ac.uk/thornton-srv/software/LigPlus/)
+دانلود از [LigPlot+](https://www.ebi.ac.uk/thornton-srv/software/LigPlus/)
 
 نصب:
 
@@ -117,7 +107,7 @@ cd LigPlus
 
 ### ۳.۸. Mendeley Desktop (مدیریت منابع علمی)
 
-دانلود از [لینک رسمی](https://desktop-download.mendeley.com/download/linux/)
+دانلود از [Mendeley](https://desktop-download.mendeley.com/download/linux/)
 
 نصب:
 
