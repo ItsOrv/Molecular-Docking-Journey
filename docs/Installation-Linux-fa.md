@@ -46,7 +46,7 @@ obabel -V  # بررسی نصب
 
 #### روش های بعدی
 اگه این روش جواب نداد روش های بعدی رو چک کنید
-advfilelink
+(روش های جایگزین)[Adv-other-installation-fa.md]
 ---
 
 ### ۳.۳. AutoDock Tools (ADT)
