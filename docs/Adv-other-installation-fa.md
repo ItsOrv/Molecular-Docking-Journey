@@ -60,4 +60,5 @@ rm -rf build dist *.egg-info
 python setup.py build install
 ```
 
-حالا برمیگردیم برمیگردیم به ادامه نصب ها [نصب برنامه ها](Installation-Linux-fa.md)
+حالا برمیگردیم برمیگردیم به ادامه نصب ها 
+[نصب برنامه ها](Installation-Linux-fa.md)
