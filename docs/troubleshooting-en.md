@@ -1,1 +1,1 @@
-[English](analysis-en.md) / [فارسی](analysis-fa.md)
+[English](troubleshooting-en.md) / [فارسی](troubleshooting-fa.md)

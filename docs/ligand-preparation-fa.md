@@ -1,3 +1,5 @@
+[English](ligand-preparation-en.md) / [فارسی](ligand-preparation-fa.md)
+
 
 ## مراحل آماده‌سازی لیگاند برای داکینگ
 
@@ -78,3 +80,7 @@
 ## فایل نهایی آماده‌شده برای داکینگ:
 
 `donepezil.pdbqt`
+
+
+
+- **[مرحله ۵: اجرای داکینگ](docking-execution-fa.md)**
