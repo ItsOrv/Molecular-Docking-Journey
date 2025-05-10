@@ -50,7 +50,7 @@ obabel -V
 اگه این روش جواب نداد روش های بعدی رو برای نصب 
 چک کنید.
 
-[روش های جایگزین](Adv-other-installation-fa.md)
+####[روش های جایگزین](Adv-other-installation-fa.md)
 ---
 
 ### ۳.۳. AutoDock Tools (ADT)
